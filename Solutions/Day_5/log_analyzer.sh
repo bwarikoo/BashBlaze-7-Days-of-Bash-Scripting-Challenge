@@ -1,6 +1,7 @@
 #!/bin/bash
 
-# TWSBashBlazeChallenge Day 5 : Log Analyzer and Report Generator
+# TWSBashBlazeChallenge Day 5: Log Analyzer and Report Generator
+# Author: Bakul Warikoo
 
 # Check if the log file path has been passed as a command line argument
 if [ $# -eq 0 ]
