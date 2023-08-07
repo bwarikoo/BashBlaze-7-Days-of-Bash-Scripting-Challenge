@@ -1,0 +1,109 @@
+Doing SSH into the client machine and installing Docker
+Hit:1 http://us-east-1.ec2.archive.ubuntu.com/ubuntu jammy InRelease
+Hit:2 http://us-east-1.ec2.archive.ubuntu.com/ubuntu jammy-updates InRelease
+Hit:3 http://us-east-1.ec2.archive.ubuntu.com/ubuntu jammy-backports InRelease
+Hit:4 http://security.ubuntu.com/ubuntu jammy-security InRelease
+Reading package lists...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+docker.io is already the newest version (20.10.25-0ubuntu1~22.04.1).
+0 upgraded, 0 newly installed, 0 to remove and 105 not upgraded.
+● docker.service - Docker Application Container Engine
+     Loaded: loaded (/lib/systemd/system/docker.service; enabled; vendor preset: enabled)
+     Active: active (running) since Mon 2023-08-07 07:58:53 UTC; 43min ago
+TriggeredBy: ● docker.socket
+       Docs: https://docs.docker.com
+   Main PID: 2447 (dockerd)
+      Tasks: 7
+     Memory: 23.9M
+        CPU: 474ms
+     CGroup: /system.slice/docker.service
+             └─2447 /usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock
+
+Aug 07 07:58:52 ip-172-31-22-232 dockerd[2447]: time="2023-08-07T07:58:52.594675764Z" level=info msg="scheme \"unix\" not registered, fallback to default scheme" module=grpc
+Aug 07 07:58:52 ip-172-31-22-232 dockerd[2447]: time="2023-08-07T07:58:52.594847379Z" level=info msg="ccResolverWrapper: sending update to cc: {[{unix:///run/containerd/containerd.sock  <nil> 0 <nil>}] <nil> <nil>}" module=grpc
+Aug 07 07:58:52 ip-172-31-22-232 dockerd[2447]: time="2023-08-07T07:58:52.595006270Z" level=info msg="ClientConn switching balancer to \"pick_first\"" module=grpc
+Aug 07 07:58:52 ip-172-31-22-232 dockerd[2447]: time="2023-08-07T07:58:52.639067415Z" level=info msg="Loading containers: start."
+Aug 07 07:58:53 ip-172-31-22-232 dockerd[2447]: time="2023-08-07T07:58:53.165746469Z" level=info msg="Default bridge (docker0) is assigned with an IP address 172.17.0.0/16. Daemon option --bip can be used to set a preferred IP address"
+Aug 07 07:58:53 ip-172-31-22-232 dockerd[2447]: time="2023-08-07T07:58:53.341182991Z" level=info msg="Loading containers: done."
+Aug 07 07:58:53 ip-172-31-22-232 dockerd[2447]: time="2023-08-07T07:58:53.421743763Z" level=info msg="Docker daemon" commit="20.10.25-0ubuntu1~22.04.1" graphdriver(s)=overlay2 version=20.10.25
+Aug 07 07:58:53 ip-172-31-22-232 dockerd[2447]: time="2023-08-07T07:58:53.422109294Z" level=info msg="Daemon has completed initialization"
+Aug 07 07:58:53 ip-172-31-22-232 systemd[1]: Started Docker Application Container Engine.
+Aug 07 07:58:53 ip-172-31-22-232 dockerd[2447]: time="2023-08-07T07:58:53.458166067Z" level=info msg="API listen on /run/docker.sock"
+Doing SSH into the client machine and installing Docker
+Hit:1 http://us-east-1.ec2.archive.ubuntu.com/ubuntu jammy InRelease
+Hit:2 http://us-east-1.ec2.archive.ubuntu.com/ubuntu jammy-updates InRelease
+Hit:3 http://us-east-1.ec2.archive.ubuntu.com/ubuntu jammy-backports InRelease
+Hit:4 http://security.ubuntu.com/ubuntu jammy-security InRelease
+Reading package lists...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+docker.io is already the newest version (20.10.25-0ubuntu1~22.04.1).
+0 upgraded, 0 newly installed, 0 to remove and 105 not upgraded.
+● docker.service - Docker Application Container Engine
+     Loaded: loaded (/lib/systemd/system/docker.service; enabled; vendor preset: enabled)
+     Active: active (running) since Mon 2023-08-07 07:59:36 UTC; 42min ago
+TriggeredBy: ● docker.socket
+       Docs: https://docs.docker.com
+   Main PID: 2390 (dockerd)
+      Tasks: 7
+     Memory: 23.9M
+        CPU: 455ms
+     CGroup: /system.slice/docker.service
+             └─2390 /usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock
+
+Aug 07 07:59:35 ip-172-31-83-78 dockerd[2390]: time="2023-08-07T07:59:35.778816739Z" level=info msg="scheme \"unix\" not registered, fallback to default scheme" module=grpc
+Aug 07 07:59:35 ip-172-31-83-78 dockerd[2390]: time="2023-08-07T07:59:35.778989381Z" level=info msg="ccResolverWrapper: sending update to cc: {[{unix:///run/containerd/containerd.sock  <nil> 0 <nil>}] <nil> <nil>}" module=grpc
+Aug 07 07:59:35 ip-172-31-83-78 dockerd[2390]: time="2023-08-07T07:59:35.779141190Z" level=info msg="ClientConn switching balancer to \"pick_first\"" module=grpc
+Aug 07 07:59:35 ip-172-31-83-78 dockerd[2390]: time="2023-08-07T07:59:35.838301282Z" level=info msg="Loading containers: start."
+Aug 07 07:59:36 ip-172-31-83-78 dockerd[2390]: time="2023-08-07T07:59:36.054422661Z" level=info msg="Default bridge (docker0) is assigned with an IP address 172.17.0.0/16. Daemon option --bip can be used to set a preferred IP address"
+Aug 07 07:59:36 ip-172-31-83-78 dockerd[2390]: time="2023-08-07T07:59:36.161301498Z" level=info msg="Loading containers: done."
+Aug 07 07:59:36 ip-172-31-83-78 dockerd[2390]: time="2023-08-07T07:59:36.235234463Z" level=info msg="Docker daemon" commit="20.10.25-0ubuntu1~22.04.1" graphdriver(s)=overlay2 version=20.10.25
+Aug 07 07:59:36 ip-172-31-83-78 dockerd[2390]: time="2023-08-07T07:59:36.235658635Z" level=info msg="Daemon has completed initialization"
+Aug 07 07:59:36 ip-172-31-83-78 systemd[1]: Started Docker Application Container Engine.
+Aug 07 07:59:36 ip-172-31-83-78 dockerd[2390]: time="2023-08-07T07:59:36.273666455Z" level=info msg="API listen on /run/docker.sock"
+Changing user permissions: user to be added into the docker group
+Changing user permissions: user to be added into the docker group
+Installing Nginx on client instances
+Reading package lists...
+Building dependency tree...
+Reading state information...
+nginx is already the newest version (1.18.0-6ubuntu14.4).
+0 upgraded, 0 newly installed, 0 to remove and 105 not upgraded.
+● nginx.service - A high performance web server and a reverse proxy server
+     Loaded: loaded (/lib/systemd/system/nginx.service; enabled; vendor preset: enabled)
+     Active: active (running) since Mon 2023-08-07 08:41:04 UTC; 1min 7s ago
+       Docs: man:nginx(8)
+   Main PID: 5254 (nginx)
+      Tasks: 2 (limit: 1141)
+     Memory: 5.5M
+        CPU: 25ms
+     CGroup: /system.slice/nginx.service
+             ├─5254 "nginx: master process /usr/sbin/nginx -g daemon on; master_process on;"
+             └─5257 "nginx: worker process" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" ""
+
+Aug 07 08:41:04 ip-172-31-22-232 systemd[1]: Starting A high performance web server and a reverse proxy server...
+Aug 07 08:41:04 ip-172-31-22-232 systemd[1]: Started A high performance web server and a reverse proxy server.
+Installing Nginx on client instances
+Reading package lists...
+Building dependency tree...
+Reading state information...
+nginx is already the newest version (1.18.0-6ubuntu14.4).
+0 upgraded, 0 newly installed, 0 to remove and 105 not upgraded.
+● nginx.service - A high performance web server and a reverse proxy server
+     Loaded: loaded (/lib/systemd/system/nginx.service; enabled; vendor preset: enabled)
+     Active: active (running) since Mon 2023-08-07 08:41:19 UTC; 54s ago
+       Docs: man:nginx(8)
+   Main PID: 5011 (nginx)
+      Tasks: 2 (limit: 1141)
+     Memory: 5.0M
+        CPU: 24ms
+     CGroup: /system.slice/nginx.service
+             ├─5011 "nginx: master process /usr/sbin/nginx -g daemon on; master_process on;"
+             └─5014 "nginx: worker process" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" ""
+
+Aug 07 08:41:19 ip-172-31-83-78 systemd[1]: Starting A high performance web server and a reverse proxy server...
+Aug 07 08:41:19 ip-172-31-83-78 systemd[1]: Started A high performance web server and a reverse proxy server.
+Successfully executed commands on client servers remotely!
